@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./Responsive.css" />
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -30,10 +31,10 @@
   >
     <header class="sticky top-0 z-50 h-0">
       <!-- Navbar top  -->
-      <div class="navTop sm:h-10 w-[100%] bg-[rgba(0,0,0,0.5)] text-white">
+      <div class="navTop lg:h-10 w-[100%] bg-[rgba(0,0,0,0.5)] text-white">
         <!-- navbar left -->
         <div
-          class="sm:flex hidden justify-between w-[90%] m-auto items-center text-md h-[100%]"
+          class="lg:flex hidden justify-between w-[90%] m-auto items-center text-md h-[100%]"
         >
           <div class="date">
             <p>
@@ -44,7 +45,7 @@
             </p>
           </div>
           <!-- navbar right  -->
-          <div class="contact w-[26%] flex justify-between">
+          <div class="contact w-[26%] lg:w-[34%] xl:text-xl flex justify-between">
             <span class="number"> +1 801 4545 87 </span
             ><span class="email">contact@gmail.com</span>
           </div>
@@ -52,29 +53,43 @@
       </div>
       <!-- navbar bottom  -->
       <div
-        class="navBottom bg-[rgba(0,0,0,0.5)] flex flex-col items-center sm:flex-row justify-around h-18"
+        class="navBottom bg-[rgba(0,0,0,0.5)] flex flex-col items-center lg:flex-row justify-around h-18"
       >
-        <div class="logo w-[30%] h-[100%] my-2 sm:my-0">
+        <div class="logo w-[30%] lg:w-[25%] xl:w-[33%] h-[100%] my-2 lg:my-0">
           <a href="#">
             <img
               src="./assets/logo.png"
               alt="Logo"
-              class="w-[100%] sm:w-[50%] cursor-pointer slide-in-right"
+              class="w-[100%] lg:w-[50%] md:w-[65%] cursor-pointer slide-in-right"
           /></a>
         </div>
         <div
-          class="navigation sm:w-[50%] mb-2 sm:mb-0 w-full justify-between"
+          class="navigation lg:w-[50%] md:w-[75%] mb-2 lg:mb-0 w-full justify-between"
         >
           <ul
-            class="flex justify-around sm:justify-between text-white sm:text-[16px] text-[12px]"
+            class="grid grid-cols-4 md:grid-cols-6 lg:flex justify-around text-white md:text-[0.9rem] text-[12px] xl:text-2xl leading-4 md:leading-6"
           >
-            <li class="cursor-pointer"><a href="#">HOME</a></li>
-            <li class="cursor-pointer"><a href="#about">ABOUT US</a></li>
-            <li class="cursor-pointer"><a href="#offer">OFFER</a></li>
-            <li class="cursor-pointer"><a href="#menu">MENU</a></li>
-            <li class="cursor-pointer"><a href="#gallery">GALLERY</a></li>
-            <li class="cursor-pointer"><a href="#contact">CONTACT</a></li>
-            <li class="cursor-pointer"><a href="#book">BOOK NOW</a></li>
+            <li class="cursor-pointer flex justify-center mb-2">
+              <a href="#">HOME</a>
+            </li>
+            <li class="cursor-pointer flex justify-center mb-2">
+              <a href="#about">ABOUT US</a>
+            </li>
+            <li class="cursor-pointer flex justify-center mb-2">
+              <a href="#offer">OFFER</a>
+            </li>
+            <li class="cursor-pointer flex justify-center mb-2">
+              <a href="#menu">MENU</a>
+            </li>
+            <!-- <li class="cursor-pointer flex justify-center mb-2">
+              <a href="#gallery">GALLERY</a>
+            </li> -->
+            <li class="cursor-pointer flex justify-center mb-2">
+              <a href="#contact">CONTACT</a>
+            </li>
+            <li class="cursor-pointer flex justify-center mb-2">
+              <a href="#book">BOOK NOW</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -113,25 +128,29 @@
             <div class="carousel-item active">
               <img
                 src="./assets/slider-bg-image-1.jpg"
-                class="d-block w-100"
+                class="d-block w-full h-screen object-cover"
                 alt="Slide Image 1"
               />
               <div
-                class="carousel-caption h-[22rem] flex flex-col top-[40%] justify-center"
+                class="carousel-caption flex flex-col top-[40%] md:top-[25%] lg:top-[20%] justify-center h-screen"
               >
                 <img
                   src="./assets/heading-element.png"
                   alt=""
                   class="w-[11rem] mx-auto mb-2"
                 />
-                <h1 class="text-[#DDB150] italic text-5xl font-mono">
+                <h1
+                  class="text-[#DDB150] italic text-xl md:mb-3 md:text-4xl font-mono"
+                >
                   Welcome To Our
                 </h1>
-                <h1 class="text-[6rem]">RESTAURANT</h1>
+                <h1 class="text-3xl md:text-6xl lg:text-5xl">RESTAURANT</h1>
                 <p class="letter tracking-[4px] my-3">
                   THE BEST MULTI CUISINE RESTAURANT
                 </p>
-                <div class="btns w-[45%] m-auto h-14 flex justify-between">
+                <div
+                  class="btns w-[45%] md:w-[65%] gap-4 m-auto h-14 flex justify-between"
+                >
                   <button
                     class="w-[45%] h-[100%] text-[#DDB150] duration-300 border-[#DDB150] border-3 hover:bg-[#DEB150] hover:text-white cursor-pointer"
                   >
@@ -148,25 +167,29 @@
             <div class="carousel-item">
               <img
                 src="./assets/slider-bg-image-2.jpg"
-                class="d-block w-100"
+                class="d-block w-full h-screen object-cover"
                 alt="Slide Image 2"
               />
               <div
-                class="carousel-caption h-[22rem] flex flex-col top-[40%] justify-center"
+                class="carousel-caption flex flex-col top-[40%] md:top-[25%] lg:top-[20%] justify-center h-screen"
               >
                 <img
                   src="./assets/heading-element.png"
                   alt=""
                   class="w-[11rem] mx-auto mb-2"
                 />
-                <h1 class="text-[#DDB150] italic text-5xl font-mono">
-                  Spacial Menu
+                <h1
+                  class="text-[#DDB150] italic text-2xl md:mb-3 md:text-4xl font-mono"
+                >
+                  Special Menu
                 </h1>
-                <h1 class="text-[6rem]">ITALIAN PIZZA</h1>
+                <h1 class="text-3xl md:text-6xl lg:text-5xl">ITALIAN PIZZA</h1>
                 <p class="letter tracking-[4px] my-3">
-                  the best Multi Cuisine Restaurant
+                  THE BEST MULTI CUISINE RESTAURANT
                 </p>
-                <div class="btns w-[45%] m-auto h-14 flex justify-between">
+                <div
+                  class="btns w-[45%] md:w-[65%] gap-4 m-auto h-14 flex justify-between"
+                >
                   <button
                     class="w-[45%] h-[100%] text-[#DDB150] duration-300 border-[#DDB150] border-3 hover:bg-[#DEB150] hover:text-white cursor-pointer"
                   >
@@ -183,25 +206,29 @@
             <div class="carousel-item">
               <img
                 src="./assets/slider-bg-image-3.jpg"
-                class="d-block w-100"
+                class="d-block w-full h-screen object-cover"
                 alt="Slide Image 3"
               />
               <div
-                class="carousel-caption h-[22rem] flex flex-col top-[40%] justify-center"
+                class="carousel-caption flex flex-col top-[40%] md:top-[25%] lg:top-[20%] justify-center h-screen"
               >
                 <img
                   src="./assets/heading-element.png"
                   alt=""
                   class="w-[11rem] mx-auto mb-2"
                 />
-                <h1 class="text-[#DDB150] italic text-5xl font-mono">
+                <h1
+                  class="text-[#DDB150] italic text-2xl md:mb-3 md:text-4xl font-mono"
+                >
                   Popular Menu
                 </h1>
-                <h1 class="text-[6rem]">Flackey Puff</h1>
+                <h1 class="text-2xl md:text-6xl lg:text-5xl">FLAKY PUFF</h1>
                 <p class="letter tracking-[4px] my-3">
-                  the best Multi Cuisine Restaurant
+                  THE BEST MULTI CUISINE RESTAURANT
                 </p>
-                <div class="btns w-[45%] m-auto h-14 flex justify-between">
+                <div
+                  class="btns w-[45%] md:w-[65%] gap-4 m-auto h-14 flex justify-between"
+                >
                   <button
                     class="w-[45%] h-[100%] text-[#DDB150] duration-300 border-[#DDB150] border-3 hover:bg-[#DEB150] hover:text-white cursor-pointer"
                   >
@@ -242,29 +269,27 @@
     <section class="relative" id="about">
       <img
         src="./assets/about-elements-1.png"
-        class="absolute z-[-1] top-12"
-        alt=""
+        class="absolute z-[-1] top-12 w-[10rem]"
       />
       <img
         src="./assets/about-elements-3.png"
-        class="absolute right-0 top-[14rem]"
-        alt=""
+        class="absolute right-0 top-[14rem] w-[10rem] z-[-100]"
       />
-      <div class="about flex mx-16 pt-20">
+      <div class="about flex flex-col lg:flex-row mx-4 lg:mx-16 pt-20">
         <!-- About Left  -->
-        <div class="aboutLeft w-[55%]">
+        <div class="aboutLeft w-full lg:w-[55%]">
           <div class="text-center flex flex-col">
-            <h1 class="text-4xl text-yellow-400">Our Story</h1>
+            <h1 class="text-2xl lg:text-4xl text-yellow-400">Our Story</h1>
             <h1
-              class="text-5xl text-white relative after:bg-[url('./assets/heading-element.png')] after:block after:h-6 after:bg-no-repeat after:w-40 after:content-[''] after:absolute after:top-14 after:left-1/2 after:transform after:-translate-x-1/2 mt-2 mb-16"
+              class="text-3xl lg:text-5xl text-white relative after:bg-[url('./assets/heading-element.png')] after:block after:h-6 after:bg-no-repeat after:w-40 after:content-[''] after:absolute after:top-10 lg:after:top-14 after:left-1/2 after:transform after:-translate-x-1/2 mt-2 mb-8 lg:mb-16"
             >
               ABOUT US
             </h1>
-            <p class="text-xl text-yellow-400 my-7">
+            <p class="text-lg lg:text-xl text-yellow-400 my-4 lg:my-7">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
               veritatis? Reiciendis quod, magnam similique delectu.
             </p>
-            <p class="text-lg text-[#C0BEBF]">
+            <p class="text-sm lg:text-lg text-[#C0BEBF]">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error,
               accusamus, distinctio dicta natus mollitia pariatur, laboriosam et
               eveniet nulla cum beatae accusantium. Nihil eveniet excepturi
@@ -272,55 +297,57 @@
               molestiae sit accusamus, pariatur harum asperiores quae aliquam.
             </p>
           </div>
-          <div class="Features mt-20 h-[18rem] grid gap-3 grid-cols-3">
-            <div class="card p-6 h-[100%] w-[100%] bg-[#202127] relative">
+          <div
+            class="Features mt-10 lg:mt-20 h-auto lg:h-[18rem] grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          >
+            <div class="card p-4 lg:p-6 h-full w-full bg-[#202127] relative">
               <div
                 class="before:absolute before:left-0 before:bottom-0 before:w-full before:h-[40%] before:bg-[#DD9744] before:z-0"
               ></div>
               <div
-                class="border-[2px] border-[#4D4D52] h-[100%] w-[100%] z-10 flex flex-col justify-between"
+                class="border-[2px] border-[#4D4D52] h-full w-full z-10 flex flex-col justify-between"
               >
                 <div class="cardTop flex justify-center items-center h-[60%]">
-                  <img src="./assets/feature1@2x.png" class="w-20" />
+                  <img src="./assets/feature1@2x.png" class="w-16 lg:w-20" />
                 </div>
                 <div
                   class="cardBottom flex justify-center items-center h-[40%] text-center"
                 >
-                  <h1 class="z-10 text-2xl">FREE DELIVERY</h1>
+                  <h1 class="z-10 text-lg lg:text-2xl">FREE DELIVERY</h1>
                 </div>
               </div>
             </div>
-            <div class="card p-6 h-[100%] w-[100%] bg-[#202127] relative">
+            <div class="card p-4 lg:p-6 h-full w-full bg-[#202127] relative">
               <div
                 class="before:absolute before:left-0 before:bottom-0 before:w-full before:h-[40%] before:bg-[#DD9744] before:z-0"
               ></div>
               <div
-                class="border-[2px] border-[#4D4D52] h-[100%] w-[100%] z-10 flex flex-col justify-between"
+                class="border-[2px] border-[#4D4D52] h-full w-full z-10 flex flex-col justify-between"
               >
                 <div class="cardTop flex justify-center items-center h-[60%]">
-                  <img src="./assets/feature1@2x.png" class="w-20" />
+                  <img src="./assets/feature1@2x.png" class="w-16 lg:w-20" />
                 </div>
                 <div
                   class="cardBottom flex justify-center items-center h-[40%] text-center"
                 >
-                  <h1 class="z-10 text-2xl">FRESHLY COOKED</h1>
+                  <h1 class="z-10 text-lg lg:text-2xl">FRESHLY COOKED</h1>
                 </div>
               </div>
             </div>
-            <div class="card p-6 h-[100%] w-[100%] bg-[#202127] relative">
+            <div class="card p-4 lg:p-6 h-full w-full bg-[#202127] relative">
               <div
                 class="before:absolute before:left-0 before:bottom-0 before:w-full before:h-[40%] before:bg-[#DD9744] before:z-0"
               ></div>
               <div
-                class="border-[2px] border-[#4D4D52] h-[100%] w-[100%] z-10 flex flex-col justify-between"
+                class="border-[2px] border-[#4D4D52] h-full w-full z-10 flex flex-col justify-between"
               >
                 <div class="cardTop flex justify-center items-center h-[60%]">
-                  <img src="./assets/feature1@2x.png" class="w-20" />
+                  <img src="./assets/feature1@2x.png" class="w-16 lg:w-20" />
                 </div>
                 <div
                   class="cardBottom flex justify-center items-center h-[40%] text-center"
                 >
-                  <h1 class="z-10 text-2xl">24 HOURS SUPPORT</h1>
+                  <h1 class="z-10 text-lg lg:text-2xl">24 HOURS SUPPORT</h1>
                 </div>
               </div>
             </div>
@@ -328,30 +355,33 @@
         </div>
         <!-- About Right  -->
         <div
-          class="aboutRigh w-[45%] relative flex justify-center before:bg-[url('./assets/about-elements-1.png')] before:bg-center"
+          class="aboutRight w-full lg:w-[45%] relative flex justify-center mt-8 lg:mt-0 before:bg-[url('./assets/about-elements-1.png')] before:bg-center"
         >
           <img
             src="./assets/about-chef@2x.png"
-            class="h-[90%] w-[80%] absolute bottom-0"
+            class="h-[80%] lg:h-[90%] w-[70%] lg:w-[80%] absolute bottom-0"
             alt=""
           />
         </div>
       </div>
     </section>
+
     <!-- Offer  -->
     <section
-      class="px-[4.5rem] py-14 bg-[url('./assets/special-menu-bg.jpg')] bg-fixed bg-cover"
+      class="lg:px-[4.5rem] py-14 bg-[url('./assets/special-menu-bg.jpg')] bg-fixed bg-cover"
       id="offer"
     >
       <div class="text text-center">
         <h1 class="text-[#DDB150] text-4xl italic mb-2">Hot offer</h1>
-        <h1 class="text-white text-6xl">SPECIAL FOR TODAY</h1>
+        <h1 class="text-white text:xl lg:text-6xl">SPECIAL FOR TODAY</h1>
       </div>
       <div class="mx-auto mt-3 w-[12rem]">
         <img src="./assets/heading-element.png" alt="" class="w-full h-full" />
       </div>
-      <div class="offerCardContainer my-11 grid grid-cols-3 gap-[2rem]">
-        <div class="offerCard">
+      <div
+        class="offerCardContainer my-11 grid grid-cols-1 lg:grid-cols-3 gap-[2rem]"
+      >
+        <div class="offerCard md:flex md:justify-center md:rounded">
           <img src="./assets/special-menu-img1@2x.jpg" class="object-cover" />
         </div>
 
@@ -383,24 +413,26 @@
             />
           </div>
         </div>
-        <div class="offerCard">
+        <div class="offerCard md:flex md:justify-center md:rounded">
           <img src="./assets/special-menu-img2@2x.jpg" class="object-cover" />
         </div>
       </div>
     </section>
     <!-- Popular  -->
     <section
-      class="px-[4.5rem] py-14 bg-[url('./assets/popular-menu-bg.jpg')] bg-fixed bg-cover"
+      class="lg:px-[4.5rem] py-14 bg-[url('./assets/popular-menu-bg.jpg')] bg-fixed bg-cover"
       id="menu"
     >
       <div class="text text-center">
         <h1 class="text-[#DDB150] text-4xl italic mb-2">you love</h1>
-        <h1 class="text-white text-6xl">POPULAR DISHES</h1>
+        <h1 class="text-white text-xl lg:text-6xl">POPULAR DISHES</h1>
       </div>
       <div class="mx-auto mt-3 w-[12rem]">
         <img src="./assets/heading-element.png" alt="" class="w-full h-full" />
       </div>
-      <div class="offerCardContainer my-11 grid grid-cols-3 gap-[2rem]">
+      <div
+        class="offerCardContainer my-11 md:mb-96 md:gap-80 lg:gap-8 lg:mb-0 grid grid-cols-1 lg:grid-cols-3 gap-[2rem]"
+      >
         <div class="offerCard h-[120vh] flex flex-col items-center relative">
           <div class="h-full w-full absolute z-10 p-4">
             <div class="h-full w-full border-2 border-black"></div>
@@ -428,7 +460,7 @@
               Tomato, fresh milk, potatos Lorem Ipsum is simply dummy text
             </p>
             <button
-              class="w-[60%] h-[3rem] mt-8 border-[1px] font-bold border-black text-[12px] cursor-pointer hover:bg-black hover:text-white duration-300"
+              class="w-[60%] h-[3rem] lg:mt-8 border-[1px] font-bold border-black text-[12px] cursor-pointer hover:bg-black hover:text-white duration-300"
             >
               ORDER NOW
             </button>
@@ -461,7 +493,7 @@
               Tomato, fresh milk, potatos Lorem Ipsum is simply dummy text
             </p>
             <button
-              class="w-[60%] h-[3rem] mt-8 border-[1px] font-bold border-black text-[12px] cursor-pointer hover:bg-black hover:text-white duration-300"
+              class="w-[60%] h-[3rem] lg:mt-8 border-[1px] font-bold border-black text-[12px] cursor-pointer hover:bg-black hover:text-white duration-300"
             >
               ORDER NOW
             </button>
@@ -494,7 +526,7 @@
               Tomato, fresh milk, potatos Lorem Ipsum is simply dummy text
             </p>
             <button
-              class="w-[60%] h-[3rem] mt-8 border-[1px] font-bold border-black text-[12px] cursor-pointer hover:bg-black hover:text-white duration-300"
+              class="w-[60%] h-[3rem] lg:mt-8 border-[1px] font-bold border-black text-[12px] cursor-pointer hover:bg-black hover:text-white duration-300"
             >
               ORDER NOW
             </button>
@@ -505,7 +537,7 @@
     <!-- History  -->
     <section>
       <div
-        class="h-[40vh grid grid-cols-4 px-8 py-28 bg-green-200 gap-3 bg-fixed relative bg-[url('./assets/body-bg.jpg')]"
+        class="grid grid-cols-1 lg:grid-cols-4 px-8 py-28 bg-green-200 gap-3 bg-fixed relative bg-[url('./assets/body-bg.jpg')]"
       >
         <img
           src="./assets/stats-elements-1.png"
@@ -576,20 +608,20 @@
 
     <!-- Footer  -->
     <footer
-      class="px-[4.5rem] py-14 bg-[url('./assets/popular-menu-bg.jpg')] bg-fixed bg-cover"
+      class="lg:px-[4.5rem] py-10 lg:py-14 bg-[url('./assets/popular-menu-bg.jpg')] bg-fixed bg-cover"
     >
       <div class="text text-center">
         <h1 class="text-[#DDB150] text-4xl italic mb-2">Be updated</h1>
-        <h1 class="text-white text-6xl">Subscribe us</h1>
+        <h1 class="text-white text-xl lg:text-6xl">Subscribe us</h1>
       </div>
       <div class="mx-auto mt-3 w-[12rem]">
         <img src="./assets/heading-element.png" alt="" class="w-full h-full" />
       </div>
-      <div class="w-1/2 mx-auto text-white text-center pt-8 pb-6">
+      <div class="w-full lg:w-1/2 mx-auto text-white text-center pt-8 pb-6">
         <p>Subscribe to our Newsletter to get first</p>
         <p>Gift voucher by StartLorem Ipsum is simply dummy</p>
       </div>
-      <div class="w-[60%] mx-auto h-11 relative">
+      <div class="w-[90%] lg:w-[60%] mx-auto h-11 relative">
         <input
           type="text"
           class="w-full h-full border-2 border-white outline-none bg-transparent py-2 px-4 text-white"
@@ -601,7 +633,9 @@
           S
         </button>
       </div>
-      <div class="social w-[25%] my-12 grid grid-cols-5 mx-auto">
+      <div
+        class="social lg:w-[35%] justify-items-center my-12 grid grid-cols-5 mx-auto"
+      >
         <button
           class="rounded-full hover:bg-[#deb150] duration-150 w-12 h-12 text-white border border-gray-800"
         >
@@ -628,7 +662,7 @@
           y
         </button>
       </div>
-      <p class="text-center text-white mb-5">
+      <p class="text-center xl:text-3xl text-white lg:mb-5">
         © 2024, All Rights Reserved, Made by
         <span
           class="text-[#deb150] hover:text-white cursor-pointer duration-300"
